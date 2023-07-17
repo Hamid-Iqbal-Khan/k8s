@@ -4,7 +4,7 @@ metadata:
   name: myapp-ingress
   namespace: test-app
   annotations:
-    kubernetes.io/ingress.class: nginx
+    kubernetes.io/ingress.class: ingress-nginx
 spec:
   rules:
     - host: myapp.local
