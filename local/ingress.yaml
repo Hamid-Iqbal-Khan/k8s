@@ -4,7 +4,7 @@ metadata:
   name: myapp-ingress
   namespace: test-app
   annotations:
-    kubernetes.io/ingress.class: ingress-nginx
+    kubernetes.io/ingress.class: nginx
 spec:
   rules:
     - host: myapp.local
@@ -17,3 +17,41 @@ spec:
                 name: myapp-service
                 port:
                   number: 8080
+
+# apiVersion: networking.k8s.io/v1 
+
+# kind: Ingress 
+
+# metadata: 
+
+#   name: myapp-ingress 
+
+#   namespace: test-app 
+
+#   annotations: 
+
+#     kubernetes.io/ingress.class: nginx 
+
+# spec: 
+
+#   rules: 
+
+#     - host: myapp.local 
+
+#       http: 
+
+#         paths: 
+
+#           - path: / 
+
+#             pathType: Prefix 
+
+#             backend: 
+
+#               service: 
+
+#                 name: myapp-service 
+
+#                 port: 
+
+#                   number: 8080 
